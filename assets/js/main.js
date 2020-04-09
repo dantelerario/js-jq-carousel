@@ -4,14 +4,13 @@ $(document).ready( function() {
 
   console.log('OK') //debug
 
+// VARIABILI ARROW
 var arrowL = $('.arrow-left');
 
 var arrowR = $('.arrow-right');
 
 
-
-
-
+//FRECCIA SINISTRA
 arrowL.click( function() {
   console.log('cliccato');  //debug
 
@@ -28,6 +27,7 @@ arrowL.click( function() {
 
 })
 
+//FRECCIA DESTRA
 arrowR.click( function() {
   console.log('cliccato');  //debug
 
@@ -44,6 +44,8 @@ arrowR.click( function() {
 
 })
 
+//KEYDOWN SECTION
+//KEY DESTRA
 $(document).keydown( function(e) {
   var img = $('.active');
   var nImg = img.next();
@@ -56,6 +58,7 @@ $(document).keydown( function(e) {
   }
 });
 
+//KEY SINISTRA
 $(document).keydown( function(e) {
   var img = $('.active');
   var pImg = img.prev();

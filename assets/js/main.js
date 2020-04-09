@@ -19,13 +19,12 @@ arrowL.click( function() {
   var pImg = img.prev();
 
   if (img.hasClass('first')) {
-    img.hadClass('active');
+    img.addClass('active');
   }
   else if (img.hasClass('active')) {
     img.removeClass('active').addClass('hidden');
     pImg.removeClass('hidden').addClass('active');
   }
-
 
 })
 
@@ -36,15 +35,38 @@ arrowR.click( function() {
   var nImg = img.next();
 
   if (img.hasClass('last')) {
-    img.hadClass('active');
+    img.addClass('active');
   }
   else if (img.hasClass('active')) {
     img.removeClass('active').addClass('hidden');
     nImg.removeClass('hidden').addClass('active');
   }
 
-
 })
+
+$(document).keydown( function(e) {
+  var img = $('.active');
+  var nImg = img.next();
+
+  if (e.keyCode == 39 && img.hasClass('last') ) {
+    img.addClass('active');
+  } else if (e.keyCode == 39) {
+    img.removeClass('active').addClass('hidden');
+    nImg.removeClass('hidden').addClass('active');
+  }
+});
+
+$(document).keydown( function(e) {
+  var img = $('.active');
+  var pImg = img.prev();
+
+  if (e.keyCode == 37 && img.hasClass('first') ) {
+    img.addClass('active');
+  } else if (e.keyCode == 37) {
+    img.removeClass('active').addClass('hidden');
+    pImg.removeClass('hidden').addClass('active');
+  }
+});
 
 
 

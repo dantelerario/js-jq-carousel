@@ -1,1 +1,43 @@
 /* js-jq-carousel */
+
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;;
+}
+
+/* UTILITIES */
+
+.hidden {
+  display: none;
+}
+
+/* MAIN */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container img {
+  width: 800px;
+}
+
+.box {
+  display: flex;
+  flex-grow: 1;
+}
+
+.arrow {
+  display: flex;
+  flex-grow: 1;
+  margin: 30px;
+}

@@ -40,7 +40,35 @@
 
 .box {
   display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
   flex-grow: 1;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0, 0.5);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 10px;
+}
+
+.dots i {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.active-dot {
+  color: dodgerblue;
+}
+
+.white-dot {
+  color: #fff;
 }
 
 .arrow {
@@ -53,4 +81,5 @@
 .arrow i {
   cursor: pointer;
   font-size: 30px;
+  padding: 5px;
 }

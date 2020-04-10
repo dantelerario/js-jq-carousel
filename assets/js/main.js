@@ -27,6 +27,23 @@ arrowL.click( function() {
 
 })
 
+//FRECCIA SINISTRA DOT
+arrowL.click( function() {
+  console.log('dot click');
+
+  var dot = $('.dot');
+  var pDot = dot.prev();
+
+  if (dot.hasClass('first-dot')) {
+    dot.addClass('active-dot');
+  }
+  else if (dot.hasClass('active-dot')) {
+    dot.removeClass('active-dot').addClass('white-dot');
+    pDot.addClass('active-dot').removeClass('white-dot');
+  }
+
+})
+
 //FRECCIA DESTRA
 arrowR.click( function() {
   console.log('cliccato');  //debug
@@ -41,8 +58,25 @@ arrowR.click( function() {
     img.removeClass('active').addClass('hidden');
     nImg.removeClass('hidden').addClass('active');
   }
-
 })
+
+//FRECCIA DESTRA DOT
+arrowR.click( function() {
+  console.log('dot click');
+
+  var dot = $('.dot');
+  var nDot = dot.next();
+
+  if (dot.hasClass('last-dot')) {
+    dot.addClass('active-dot');
+  }
+  else if (dot.hasClass('active-dot')) {
+    dot.removeClass('active-dot').addClass('white-dot');
+    nDot.addClass('active-dot').removeClass('white-dot');
+  }
+})
+
+
 
 //KEYDOWN SECTION
 //KEY DESTRA
@@ -70,25 +104,6 @@ $(document).keydown( function(e) {
     pImg.removeClass('hidden').addClass('active');
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 })

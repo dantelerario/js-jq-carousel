@@ -31,7 +31,7 @@ arrowL.click( function() {
 arrowL.click( function() {
   console.log('dot click');
 
-  var dot = $('.dot');
+  var dot = $('.active-dot');
   var pDot = dot.prev();
 
   if (dot.hasClass('first-dot')) {
@@ -64,7 +64,7 @@ arrowR.click( function() {
 arrowR.click( function() {
   console.log('dot click');
 
-  var dot = $('.dot');
+  var dot = $('.active-dot');
   var nDot = dot.next();
 
   if (dot.hasClass('last-dot')) {

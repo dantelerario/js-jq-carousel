@@ -92,6 +92,20 @@ $(document).keydown( function(e) {
   }
 });
 
+//KEY DESTRA DOTS
+$(document).keydown( function(e) {
+  var dot = $('.active-dot');
+  var nDot = dot.next();
+
+  if (e.keyCode == 39 && dot.hasClass('last-dot')) {
+    dot.addClass('active-dot');
+  }
+  else if (e.keyCode == 39 && dot.hasClass('active-dot')) {
+    dot.removeClass('active-dot').addClass('white-dot');
+    nDot.addClass('active-dot').removeClass('white-dot');
+  }
+});
+
 //KEY SINISTRA
 $(document).keydown( function(e) {
   var img = $('.active');
@@ -102,6 +116,20 @@ $(document).keydown( function(e) {
   } else if (e.keyCode == 37) {
     img.removeClass('active').addClass('hidden');
     pImg.removeClass('hidden').addClass('active');
+  }
+});
+
+//KEY SINISTRA DOTS
+$(document).keydown( function(e) {
+  var dot = $('.active-dot');
+  var pDot = dot.prev();
+
+  if (e.keyCode == 37 && dot.hasClass('first-dot')) {
+    dot.addClass('active-dot');
+  }
+  else if (e.keyCode == 37 && dot.hasClass('active-dot')) {
+    dot.removeClass('active-dot').addClass('white-dot');
+    pDot.addClass('active-dot').removeClass('white-dot');
   }
 });
 
